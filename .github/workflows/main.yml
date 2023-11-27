@@ -18,6 +18,7 @@ jobs:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
           BLACKDUCK_TRUST_CERT: true
           DETECT_BLACKDUCK_SIGNATURE_SCANNER_INDIVIDUAL_FILE_MATCHING: 'ALL'
+          DETECT_BLACKDUCK_SIGNATURE_SCANNER_SNIPPET_MATCHING: 'FULL_SNIPPET_MATCHING'
         with:
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
